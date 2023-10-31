@@ -4,7 +4,7 @@ Welcome to Solemate, a wedding website that brings couples closer to their dream
 
 ## Live Demo
 
-Check out the live demo of my portfolio [here](https://mr-x0s1.netlify.app/).
+Check out the live demo of my portfolio [here](https://solemate-drab.vercel.app/).
 
 
 ## Technologies Used
