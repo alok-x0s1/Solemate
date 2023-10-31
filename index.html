@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solemate | A wedding ceremony website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- Header Section  -->
+    <header>
+        <a href="/" class="logo">Solemate</a>
+        <a href="#" class="menu" onclick="toggleMenu();">
+            <ion-icon class="open" name="menu-outline"></ion-icon>
+            <ion-icon class="close" name ="close-outline"></ion-icon>
+        </a>
+
+        <ul class="nav">
+            <li><a class="nav-btn active" href="/" onclick="resetHeader();"><ion-icon name="home-outline"></ion-icon></a></li>
+            <li><a class="nav-btn" href="#" data-target="about">about</a></li>
+            <li><a class="nav-btn" href="#" data-target="services">services</a></li>
+            <li><a class="nav-btn" href="#" data-target="portfolio">portfolio</a></li>
+            <li><a class="nav-btn" href="#" data-target="contact">contact</a></li>
+        </ul>
+
+        <div class="search">
+            <input type="text" placeholder="search">
+            <ion-icon name="search-outline"></ion-icon>
+        </div>
+    </header>
+
+    <!-- Mobile navigation -->
+    <ul class="nav-mobile">
+        <li>
+            <a class="nav-btn active" href="/" onclick="resetHeader();">
+            <ion-icon name="home-outline"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a class="nav-btn" href="#" data-target="about">about</a>
+        </li>
+        <li>
+            <a class="nav-btn" href="#" data-target="services">services</a>
+        </li>
+        <li>
+            <a class="nav-btn" href="#" data-target="portfolio">portfolio</a>
+        </li>
+        <li>
+            <a class="nav-btn" href="#" data-target="contact">contact</a>
+        </li>
+    </ul>
+
+    <!-- Banner -->
+    <div class="banner container-fluid">
+        <div class="bg-slide slide-1 active">
+            <div class="content">
+                <h1>Wedding</h1>
+                <p>Step into the enchanting world of Solemate's Wedding Section, where anticipation and love converge. Our countdown timer sets the stage for your dream day. Explore detailed planning tools, meet real couples through featured stories, and discover trusted vendors for every element of your celebration. Let the journey to your wedding day unfold seamlessly as Solemate becomes your trusted companion in turning visions into reality.</p>
+            </div>
+            <div class="circle bg">
+                <img src="/css/images/wedding-1.jpg" alt="">
+                <div class="circle large">
+                    <img src="/css/images/wedding-1.jpg" alt="">
+                    <div class="circle small">
+                        <img src="/css/images/wedding-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slide slide-2">
+            <div class="content">
+                <h1>Ceremony</h1>
+                <p> Immerse yourself in the magic of Solemate's Ceremony Section, where picturesque venues and unique details come together. From elegant settings to personalized invitations, this section is crafted to make your ceremony unforgettable. Utilize our planning tools for a harmonious experience, and with features like RSVP options and live streaming, ensure that your ceremony is not only memorable for you but for every guest near or far.</p>
+            </div>
+            <div class="circle bg">
+                <img src="/css/images/wedding-2.jpg" alt="">
+                <div class="circle large">
+                    <img src="/css/images/wedding-2.jpg" alt="">
+                    <div class="circle small">
+                        <img src="/css/images/wedding-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slide slide-3">
+            <div class="content">
+                <h1>Honeymoon</h1>
+                <p>Begin the voyage into forever with Solemate's Honeymoon Section, an escape into dream destinations. Discover curated honeymoon packages, travel tools for seamless planning, and heartfelt reviews from couples who've wandered the same paths. Share your own postcards and love stories on our travel blog, creating a collective narrative of timeless romance. Let Solemate be your guide as you embark on a journey that extends beyond the wedding day, creating memories that last a lifetime.</p>
+            </div>
+            <div class="circle bg">
+                <img src="/css/images/wedding-3.jpg" alt="">
+                <div class="circle large">
+                    <img src="/css/images/wedding-3.jpg" alt="">
+                    <div class="circle small">
+                        <img src="/css/images/wedding-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="slide-loader">
+            <li><a class="slide-btn active" data-target="slide-1">1</a></li>
+            <li><a class="slide-btn" data-target="slide-2">2</a></li>
+            <li><a class="slide-btn" data-target="slide-3">3</a></li>
+        </ul>
+
+        <div class="share">
+            <p>share</p>
+            <ion-icon name="share-social-outline"></ion-icon>
+        </div>
+
+        <div class="lead">
+            <svg viewBox="0 0 100 100" width="100" height="100">
+                <defs>
+                    <path
+                    id="circle"
+                    d="
+                    M 50, 50
+                    m -37, 0
+                    a 37,37 0 1,1 74,0
+                    a 37,37 0 1,1 -74,0"
+                    />
+                </defs>
+                <text font-size="17">
+                    <textPath xlink:href="#circle">
+                        Will you marry me, Baby...Yes I do...
+                    </textPath>
+                </text>
+            </svg>
+            <a href="#" class="move-down" onclick="initialNavigation();">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- About section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="row">
+                    <h1>About Us</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="img-box">
+                            <img src="/css/images/about-1.jpg" alt="img1" class="img-fluid">
+                            <img src="/css/images/about-2.jpg" alt="img2" class="corner-img">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <img src="/css/images/bg-tree.png" alt="" class="section-bg-img">
+                        <h4>Solemate : Crafting love stories</h4>
+                        <p>In the heart of Solemate lies the "About Us" section, a glimpse into the passion that fuels our commitment to crafting unforgettable love stories. Established with the belief that every union is a unique journey, Solemate dedicates itself to being the companion that turns dreams into cherished realities.</p>
+                        <p>In this section, discover the essence of Solemate—a platform born from a love for love. Our mission is to provide couples with more than just a wedding planning tool; it's a space where dreams unfold, and every detail is a brushstroke on the canvas of everlasting love. Solemate is more than a service; it's a celebration of the extraordinary tapestry woven by the threads of each unique love story.</p>
+                        <a href="#" class="section-btn">Discover more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Services section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="row">
+                    <h1>Our services</h1>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="/css/images/services-1.jpg" alt="img1">
+                            </div>
+                            <div class="details">
+                                <h4>Wedding Plan</h4>
+                                <p>Experience love's journey with Solemate's Wedding Section. Countdown to your dream day using our tools. Meet real couples and discover trusted vendors for a seamless, magical celebration.</p>
+                                <a href="#" class="section-btn">Discover more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="/css/images/services-2.jpg" alt="img1">
+                            </div>
+                            <div class="details">
+                                <h4>Ceremony</h4>
+                                <p>In Solemate's Ceremony Section, find enchanting venues and personalized details. Use planning tools for a harmonious ceremony. With RSVP options and live streaming, make it unforgettable for every guest.</p>
+                                <a href="#" class="section-btn">Discover more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="/css/images/services-3.jpg" alt="img1">
+                            </div>
+                            <div class="details">
+                                <h4>Honeymoon</h4>
+                                <p>Embark on a forever journey with Solemate's Honeymoon Section. Discover curated packages, travel tools, and heartfelt reviews. Share your postcards and love stories, creating timeless memories beyond the wedding day.</p>
+                                <a href="#" class="section-btn">Discover more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Portfolio section -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <h1>Our Portfolio</h1>
+                </div>
+                <ul id="portfolio-filters" class="d-flex justify-content-center align-items-center">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-wedding">Wedding</li>
+                    <li data-filter=".filter-ceremony">Ceremony</li>
+                    <li data-filter=".filter-honeymoon">Honeymoon</li>
+                </ul>
+
+                <div class="row portfolio-container">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-wedding">
+                        <div class="portfolio-img">
+                            <img class="img-fluid" src="/css/images/portfolio/portfolio-1.jpg" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Wedding Planning 1</h4>
+                            <p>LoveQuest Planner</p>
+                            <a href="./css/images/portfolio/portfolio-1.jpg" data-gallery="poertfolioGallery" class="portfolio-lightbox preview-link" title="Wedding Plan 1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </a>
+                            <a href="#" title="More details" class="details-link">
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Map the remaining data into portfolio card -->
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-wedding">
+                        <div class="portfolio-img">
+                            <img class="img-fluid" src="/css/images/portfolio/portfolio-2.jpg" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Wedding Planning 2</h4>
+                            <p>DreamDay Organizer</p>
+                            <a href="./css/images/portfolio/portfolio-2.jpg" data-gallery="poertfolioGallery" class="portfolio-lightbox preview-link" title="Wedding Plan 2">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </a>
+                            <a href="#" title="More details" class="details-link">
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-wedding">
+                        <div class="portfolio-img">
+                            <img class="img-fluid" src="/css/images/portfolio/portfolio-3.jpg" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Wedding Planning 3</h4>
+                            <p>Blissful Union Hub</p>
+                            <a href="./css/images/portfolio/portfolio-3.jpg" data-gallery="poertfolioGallery" class="portfolio-lightbox preview-link" title="Wedding Plan 3">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </a>
+                            <a href="#" title="More details" class="details-link">
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-ceremony">
+                        <div class="portfolio-img">
+                            <img class="img-fluid" src="/css/images/portfolio/portfolio-6.jpg" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Ceremony 1</h4>
+                            <p>Harmony Haveen</p>
+                            <a href="./css/images/portfolio/portfolio-6.jpg" data-gallery="poertfolioGallery" class="portfolio-lightbox preview-link" title="Ceremony 1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </a>
+                            <a href="#" title="More details" class="details-link">
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-ceremony">
+                        <div class="portfolio-img">
+                            <img class="img-fluid" src="/css/images/portfolio/portfolio-7.jpg" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Ceremony 2</h4>
+                            <p>Unveiled Elegance</p>
+                            <a href="./css/images/portfolio/portfolio-7.jpg" data-gallery="poertfolioGallery" class="portfolio-lightbox preview-link" title="Ceremony 2">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </a>
+                            <a href="#" title="More details" class="details-link">
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-ceremony">
+                        <div class="portfolio-img">
+                            <img class="img-fluid" src="/css/images/portfolio/portfolio-8.jpg" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Ceremony 3</h4>
+                            <p>Vowscape Organizer</p>
+                            <a href="./css/images/portfolio/portfolio-8.jpg" data-gallery="poertfolioGallery" class="portfolio-lightbox preview-link" title="Ceremony 3">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </a>
+                            <a href="#" title="More details" class="details-link">
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-honeymoon">
+                        <div class="portfolio-img">
+                            <img class="img-fluid" src="/css/images/portfolio/portfolio-4.jpg" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Honeymoon 1</h4>
+                            <p>JourneyJoy Planner</p>
+                            <a href="./css/images/portfolio/portfolio-4.jpg" data-gallery="poertfolioGallery" class="portfolio-lightbox preview-link" title="Honeymoon 1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </a>
+                            <a href="#" title="More details" class="details-link">
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-honeymoon">
+                        <div class="portfolio-img">
+                            <img class="img-fluid" src="/css/images/portfolio/portfolio-5.jpg" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Honeymoon 2</h4>
+                            <p>Forever Wander Lust</p>
+                            <a href="./css/images/portfolio/portfolio-5.jpg" data-gallery="poertfolioGallery" class="portfolio-lightbox preview-link" title="Honeymoon 2">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </a>
+                            <a href="#" title="More details" class="details-link">
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-honeymoon">
+                        <div class="portfolio-img">
+                            <img class="img-fluid" src="/css/images/portfolio/portfolio-9.jpg" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Honeymoon 3</h4>
+                            <p>DestinationDreams Organizer</p>
+                            <a href="./css/images/portfolio/portfolio-9.jpg" data-gallery="poertfolioGallery" class="portfolio-lightbox preview-link" title="Honeymoon 3">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </a>
+                            <a href="#" title="More details" class="details-link">
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="row">
+                    <h1>Contact Us</h1>
+                </div>
+                <div>
+                    <iframe style="border: 0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3605.6455972451795!2d82.99079007492156!3d25.349670825508944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDIwJzU4LjgiTiA4MsKwNTknMzYuMSJF!5e0!3m2!1sen!2sin!4v1697195408880!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <ion-icon name="location-outline"></ion-icon>
+                               <h4>Location : </h4> 
+                               <p>Police Line Rd, Pandeypur Chauraha, Sikraul, Varanasi, Uttar Pradesh 221102</p>
+                            </div>
+                            <div class="email">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <h4>Email : </h4>
+                                <p>business@solemate.com</p>
+                            </div>
+                            <div class="phone">
+                                <ion-icon name="call-outline"></ion-icon>
+                                <h4>Call : </h4>
+                                <p>+1 9876 2435 66</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" placeholder="Your name" required>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" placeholder="Your email" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" id="message"rows="5" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ionicons script files -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- bootstrap cdn script files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+    <!-- GlightBox js -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- custom js script files -->
+    <script src="/js/app.js"></script>
+    <script src="/js/isotope.js"></script>
+</body>
+</html>
